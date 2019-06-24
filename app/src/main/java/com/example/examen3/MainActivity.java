@@ -50,18 +50,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         myAdapter.notifyItemInserted(listNotes.size());
     }
 
+    public void  delNote() {
+        listNotes.remove(listNotes.size()-1);
+        myAdapter.notifyItemRemoved(listNotes.size());
+    }
+
     public void onClick(View v) {
     int aver = v.getId();
         switch (aver) {
             case R.id.btnAdd:
                 addNote("new note", "new body" );
-                Toast.makeText(getApplicationContext(),"hola soy btnAdd", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Hello I am btnAdd", Toast.LENGTH_LONG).show();
                 break;
             case R.id.btnMove:
-                Toast.makeText(getApplicationContext(),"hola soy btnMove", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Hello I am btnMove", Toast.LENGTH_LONG).show();
                 break;
             case R.id.btnDel:
-                Toast.makeText(getApplicationContext(),"hola soy btnDel", Toast.LENGTH_LONG).show();
+                delNote();
+                Toast.makeText(getApplicationContext(),"Hello I am btnDel", Toast.LENGTH_LONG).show();
                 break;
             default:
                 break;
