@@ -13,7 +13,7 @@ import java.util.List;
 
 public class MySharedPreferences {
 
-    private  static SharedPreferences mySharedPref;
+    private static SharedPreferences mySharedPref;
     static final String KEYNAME = "note";
     private static Object listNotes;
 
